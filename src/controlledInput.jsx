@@ -34,27 +34,38 @@ export default class ControlledInput extends Component {
     };
 
     render() {
+
+        const styles = {
+            padding: '0px',
+            fontFamily: 'Verdana',
+            overflow: 'hidden',
+        };
+
+        const redstyle = {
+            color : 'red',
+        };
+
         let message;
 
         if (this.state.violations.length === 0) {
             message = 'No records';
         } else {
             message = (
-                <ul>
+                <ol>
                     {this.state.violations.map(item => {
                         return (
                             <li>
-                                {item.date} - {item.violation} - {item.product}
+                                {item.date} - {item.product} - <span style={redstyle}>{item.violation}</span>
                             </li>
                         );
                     })}
-                </ul>
+                </ol>
             );
         }
 
         return (
-            <div>
-                Input
+            <div style={styles}>
+                Input :
                 <input
                     value={this.state.inputValue}
                     onChange={this.handleChange}

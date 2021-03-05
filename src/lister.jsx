@@ -14,6 +14,8 @@ export default class Lister extends Component {
         };
     }
 
+    
+
     render() {
         return (
             <div className="col-sm-4">

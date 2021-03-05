@@ -31,3 +31,14 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  background-color: lightgreen;
+  transition: .4s ease all;
+}
+
+button:hover {
+  background-color: skyblue;
+  transition: .4 ease all;
+  transform : translateY(-5px);
+}
