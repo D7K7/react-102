@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Forest from './Forest.jpg';
 
 export default class ControlledInput extends Component {
     constructor() {
@@ -65,6 +66,7 @@ export default class ControlledInput extends Component {
 
         return (
             <div style={styles}>
+                <img src={Forest} alt = "A forest." className="center"/>
                 Input :
                 <input
                     value={this.state.inputValue}
